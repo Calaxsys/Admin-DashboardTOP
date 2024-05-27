@@ -4,7 +4,6 @@
 
 * {
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 body {
@@ -14,6 +13,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -33,8 +33,97 @@ body {
 
 .header {
     grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+}
+
+.searchbar {
+    padding-left: 80px;
+}
+
+.searchbar input[type="text"] {
+    width: 100%;
+    max-width: 600px;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+#searchbar {
+    height: 30px;
+    border-radius: 15px;
+    border: none;
+    background-color: lightgrey;
+    min-width: fit-content;
+}
+
+.username-section {
+    display: flex;
+}
+
+.greeting-section {
+    padding-top: 1%;
+    padding-left: 15%;
+}
+
+.greeting-section > span {
+    font-weight: 500;
+}
+
+.header-btns {
+    display: flex;
+}
+
+.btn {
+    margin: 26px 10px;
+    padding: 0 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 15px;
+    border: 1px solid #3b82f6;
+}
+
+#username-h2 {
+    margin: 0;
 }
 
 .main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 50px 1fr;
+}
+
+.main > *, .main > div, .main > div > div {
+    /* border: 1px solid red; */
+}
+
+#projects-title, #announcements-title {
+    font-weight: 500;
+}
+
+#projects-title {
+    grid-column: 1 / 2;
+}
+
+.projects-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.announcements-section {
     grid-column: 2 / 3;
 }
