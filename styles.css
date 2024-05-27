@@ -1,0 +1,16 @@
+:root {
+    --system-ui: "Proxima Nova", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--system-ui);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
