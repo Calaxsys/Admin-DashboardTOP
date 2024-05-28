@@ -228,3 +228,9 @@ body {
   top: 100px;
   left: 220px;
 }
+
+.search-icon {
+  position: absolute;
+  top: 13px;
+  margin-left: 25px;
+}
